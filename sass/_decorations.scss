@@ -1,0 +1,127 @@
+$mainPageColor: #fff;
+
+/* try to use http://www.colorzilla.com/gradient-editor/ for gradients for compass*/
+@mixin gradient($start, $end) {
+  background-color: $end;
+  background: linear-gradient(to top, $start, $end);
+  background: -ms-linear-gradient(top, $end 0%,$start 100%);
+}
+
+a {
+  color: #024269;
+  &:hover {
+    color: #a574b7;
+  }
+  &:visited {
+    color: #99bfd6;
+  }
+  &.active {
+    text-decoration: none;
+  }
+}
+
+.content,
+header .first-line {
+  background-color: $mainPageColor;
+}
+
+header .header-decoration {
+  border-top: 4px solid #a4bfd4;
+  color: $mainPageColor;
+  @extend .img-header-bground;
+  p {
+      margin: 0;
+      padding: 35px 0 32px;
+      line-height: 35px;
+    }
+}
+
+header .menu {
+  //@extend .img-menu-bground;
+  @include gradient(#c1c2e3, #f1f1f9);
+
+  border-bottom: 4px solid #a3a6d4;
+  & > li:hover {
+    //@extend .img-active-bgroung;
+    @include gradient(#3b80a9, #c0deea);
+  }
+}
+
+.aside-menu {
+  margin: 0 10px;
+  padding: 0;
+  li {
+    padding: 0 0 10px 0;
+    font-size: 12px;
+    &:before {
+      //@extend .img-li;
+      /**
+      * better sprite is :
+      */
+      @include sprite($sprite, li);
+      content: '';
+      display: inline-block;
+      vertical-align: middle;
+      margin: 0 13px 0 0;
+    }
+    &.active {
+      &:before {
+        @include sprite($sprite, active-li);
+      }
+    }
+  }
+}
+
+footer {
+  color: #fff;
+  background-color: #7371b2;
+}
+
+.footer-information {
+  float: left;
+  width: 50%;
+
+  p {
+    margin: 0;
+    line-height: 14px;
+  }
+
+  a {
+    color: $mainPageColor;
+  }
+
+  .telephone {
+    position: relative;
+    padding-right: 5px;
+
+    &:after {
+      padding: 0 0 0 9px;
+      content: "|";
+    }
+  }
+
+  .email {
+    a {
+      text-decoration: none;
+
+      /* this will be "blablabla a:hover a { blalblalba}" - is it right? */
+      &:hover a {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+/* feel free to use sass nesting rules : */
+
+//.content nav li {
+//    @extend .img-arrows;
+//}
+
+.content {
+  nav {
+    li {
+      @extend .img-arrows;
+    }
+  }
+}

@@ -1,0 +1,23 @@
+/* Welcome to Compass. Use this file to write IE specific override styles.
+ * Import this file using the following HTML or equivalent:
+ * <!--[if IE]>
+ *   <link href="/stylesheets/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
+ * <![endif]--> */
+
+$noBorder: none;
+
+$menuBorder: 1px solid;
+
+.clearfix {*zoom: 1;}
+
+.secondary-links li {border-left: $menuBorder #36cef7;}
+
+.secondary-links li:first-child {border-left: $noBorder;}
+
+span.email {border-left: $menuBorder #fff;}
+
+.dropdown {left: 0;}
+
+header .menu > li > a {line-height: 20px;}
+
+header .menu {border: $noBorder;}

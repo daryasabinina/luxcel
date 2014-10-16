@@ -1,0 +1,158 @@
+/*compass itself*/
+.img-sprite, .img-active-bground, .img-active-li, .img-arrows, .content nav li, .img-aside, .img-footer-logo, .img-header-bground, header .header-decoration, .img-li, .img-logo, .img-menu-bground, .img-sprite-s5b374cc820, .img-user { background-image: url('../img/../img-sa1f0081e26.png'); background-repeat: no-repeat; }
+
+.img-active-bground { background-position: 0 0; }
+
+.img-active-li { background-position: 0 -34px; }
+
+.img-arrows, .content nav li { background-position: 0 -58px; }
+
+.img-aside { background-position: 0 -71px; }
+
+.img-footer-logo { background-position: 0 -72px; }
+
+.img-header-bground, header .header-decoration { background-position: 0 -105px; }
+
+.img-li { background-position: 0 -207px; }
+
+.img-logo { background-position: 0 -231px; }
+
+.img-menu-bground { background-position: 0 -275px; }
+
+.img-sprite-s5b374cc820 { background-position: 0 -309px; }
+
+.img-user { background-position: 0 -798px; }
+
+/*maybe not best namimg :)*/
+/**
+* extends to use later
+**/
+.clearfix:after, .container:after, header .first-line:after { clear: both; display: table; content: ""; }
+
+html, body { height: 100%; }
+
+.container { width: 950px; min-height: 100%; margin: 0 auto; background: url("../img/aside.png") 0 0 repeat-y; }
+
+aside, .content { float: left; }
+
+.content { width: 647px; padding-left: 40px; padding-right: 40px; }
+
+footer { z-index: 5; width: 900px; height: 40px; margin: -80px auto 0; padding: 19px 25px; }
+
+.forFooter { position: relative; height: 80px; }
+
+/*
+header .first-line { @extend %clearfix; padding: 24px 14px 4px 15px;
+}
+
+header .logo { float: left; margin-left: 9px;
+}
+
+header .header-decoration { box-sizing: border-box; padding-left: 128px;
+}
+
+header .header-decoration p { margin: 0; padding: 35px 0 32px;
+}
+
+header .menu { margin: 0; padding-left: $aside+1px;
+}
+*/
+/**
+* this all goes somehow like that
+*/
+header .first-line { padding: 24px 14px 4px 15px; }
+header .logo { float: left; margin-left: 9px; }
+header .header-decoration { box-sizing: border-box; padding-left: 128px; }
+header .header-decoration p { margin: 0; padding: 35px 0 32px; }
+header .menu { margin: 0; padding-left: 224px; }
+
+aside { width: 223px; background-color: #e7e6ee; }
+aside h2 { margin: 0 0 16px; padding: 6px 24px 2px; color: white; font-size: 18px; background-color: #7573b5; }
+
+article { margin-bottom: 41px; }
+
+section img { float: left; padding: 7px 25px 10px 0; }
+section p { margin: 18px 0; font-size: 12px; line-height: 18px; }
+
+.footer-logo { position: relative; top: 7px; float: right; text-align: right; }
+
+.hNav, .secondary-links li, header .menu > li { position: relative; float: left; }
+
+.aside-menu li, .secondary-links li, header .menu li { list-style: none; }
+
+.secondary-links li { padding: 6px 11px 0; }
+.secondary-links li:after { position: absolute; left: -3px; color: #02a1d6; content: "|"; }
+.secondary-links li:first-child:after { content: ""; }
+header .secondary-links { float: right; margin: 0; padding: 0; }
+
+.secondary-links a:hover { text-decoration: none; }
+
+header .menu > li { padding: 0; line-height: 18px; text-transform: uppercase; white-space: nowrap; }
+header .menu > li > a { display: inline-block; padding: 10px 14px 5px 13px; color: #024269; line-height: 16px; text-shadow: 0 1px 0 white; text-decoration: none; }
+header .menu > li:hover:after { position: absolute; bottom: -4px; right: 0; width: 100%; height: 4px; background-color: #276994; content: ""; }
+header .menu > li:hover > a { color: #fff; text-shadow: 0 1px 0 #7c8d9a; }
+
+.dropdown { position: absolute; z-index: 9; top: 35px; float: none; display: none; width: 100%; margin: 0; padding: 0; overflow: hidden; color: #024269; text-transform: none; background-color: #89cfe2; }
+.dropdown a { display: block; padding: 6px 0 6px 14px; text-decoration: none; }
+.dropdown a:hover { color: #fff; background-color: #026997; }
+.menu li:hover .dropdown { display: block; }
+.menu a:hover .dropdown li { display: block; width: 100%; padding: 0; }
+
+.content nav ul { margin: 0; padding: 7px 0 5px; }
+.content nav li { display: inline; padding: 0 0 0 16px; list-style-image: none; }
+.content nav li:first-child { background: none; padding: 0; }
+
+.content h1 { margin: 17px 0 0; padding-bottom: 6px; border-bottom: 1px solid #ccc; color: #025d89; letter-spacing: -1px; }
+.content h1 + section h2 { margin: 28px 0 17px; color: #625f9e; line-height: 18px; }
+
+.content .secondary-links { margin: 0; padding: 16px 0 38px; border-top: 1px solid #ccc; }
+.content .secondary-links li { padding: 3px 11px 0; }
+.content .secondary-links li:first-child { padding-left: 2px; }
+
+footer, aside li, .dropdown a, .content h2, .secondary-links li, .content nav ul { font-size: 11px; font-family: Tahoma, Geneva, sans-serif; }
+
+aside h2, .content h1, header .menu, header .header-decoration p { font-family: "Myriad Pro", Arial, sans-serif; }
+
+.content section { font-family: Verdana, Geneva, sans-serif; }
+
+.content h1, .content h2 { font-weight: normal; }
+
+header .header-decoration p { font-size: 29px; font-style: italic; }
+
+header .menu > li > a { font-size: 14px; font-weight: bold; }
+
+.content h1 { font-size: 24px; }
+.content h1 + section h2 { font-size: 17px; }
+
+/* try to use http://www.colorzilla.com/gradient-editor/ for gradients for compass*/
+a { color: #024269; }
+a:hover { color: #a574b7; }
+a:visited { color: #99bfd6; }
+a.active { text-decoration: none; }
+
+.content, header .first-line { background-color: white; }
+
+header .header-decoration { border-top: 4px solid #a4bfd4; color: white; }
+header .header-decoration p { margin: 0; padding: 35px 0 32px; line-height: 35px; }
+
+header .menu { background-color: #f1f1f9; background: linear-gradient(to top, #c1c2e3, #f1f1f9); background: -ms-linear-gradient(top, #f1f1f9 0%, #c1c2e3 100%); border-bottom: 4px solid #a3a6d4; }
+header .menu > li:hover { background-color: #c0deea; background: linear-gradient(to top, #3b80a9, #c0deea); background: -ms-linear-gradient(top, #c0deea 0%, #3b80a9 100%); }
+
+.aside-menu { margin: 0 10px; padding: 0; }
+.aside-menu li { padding: 0 0 10px 0; font-size: 12px; }
+.aside-menu li:before { /**
+* better sprite is :
+*/ background: url('../img/sprite-s5b374cc820.png') 0 -207px no-repeat; height: 24px; width: 25px; content: ''; display: inline-block; vertical-align: middle; margin: 0 13px 0 0; }
+.aside-menu li.active:before { background: url('../img/sprite-s5b374cc820.png') 0 -34px no-repeat; height: 24px; width: 25px; }
+
+footer { color: #fff; background-color: #7371b2; }
+
+.footer-information { float: left; width: 50%; }
+.footer-information p { margin: 0; line-height: 14px; }
+.footer-information a { color: white; }
+.footer-information .telephone { position: relative; padding-right: 5px; }
+.footer-information .telephone:after { padding: 0 0 0 9px; content: "|"; }
+.footer-information .email a { text-decoration: none; /* this will be "blablabla a:hover a { blalblalba}" - is it right? */ }
+.footer-information .email a:hover a { text-decoration: underline; }
+
+/* feel free to use sass nesting rules : */

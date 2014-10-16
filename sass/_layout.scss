@@ -1,0 +1,135 @@
+
+
+html,
+body {
+  height: $mHeight;
+}
+
+.container {
+  @extend %clearfix;
+  width: $mWidth;
+  min-height: $mHeight;
+  margin: $center;
+  background: url("../img/aside.png") 0 0 repeat-y;
+}
+
+aside,
+.content {
+  float: left;
+}
+
+.content {
+  width: $mWidth - $aside - $cPadding*2;
+  padding-left: $cPadding;
+  padding-right: $cPadding;
+}
+
+footer {
+  z-index: 5;
+  width: $mWidth - 50px;
+  height: $hFooter;
+  margin: -$hFooter*2 auto 0;
+  padding: 19px 25px;
+}
+
+.forFooter {
+  position: relative;
+  height: $hFooter*2;
+}
+
+/*
+header .first-line {
+  @extend %clearfix;
+  padding: 24px 14px 4px 15px;
+}
+
+header .logo {
+  float: left;
+  margin-left: 9px;
+}
+
+header .header-decoration {
+  box-sizing: border-box;
+  padding-left: 128px;
+}
+
+header .header-decoration p {
+  margin: 0;
+  padding: 35px 0 32px;
+}
+
+header .menu {
+  margin: 0;
+  padding-left: $aside+1px;
+}
+*/
+
+
+/**
+* this all goes somehow like that
+*/
+
+header {
+  .first-line {
+    @extend %clearfix;
+    padding: 24px 14px 4px 15px;
+  }
+
+  .logo {
+    float: left;
+    margin-left: 9px;
+  }
+
+  .header-decoration {
+    box-sizing: border-box;
+    padding-left: 128px;
+
+    p {
+      margin: 0;
+      padding: 35px 0 32px;
+    }
+  }
+
+  .menu {
+    margin: 0;
+    padding-left: $aside+1px;
+  }
+}
+
+aside {
+  width: $aside;
+  background-color: #e7e6ee;
+
+  h2 {
+    margin: 0 0 16px;
+    padding: 6px 24px 2px;
+    color: $theme-lightest-color;
+    font-size: 18px;
+    background-color: $theme-color;
+  }
+}
+
+article {
+  margin-bottom: $hFooter+1px;
+}
+
+section {
+
+  img {
+    float: left;
+    padding: 7px 25px 10px 0;
+  }
+
+  p {
+    margin: 18px 0;
+    font-size: 12px;
+    line-height: 18px;
+  }
+}
+
+.footer-logo {
+  position: relative;
+  top: 7px;
+  float: right;
+  text-align: right;
+}

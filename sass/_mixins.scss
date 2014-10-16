@@ -1,0 +1,30 @@
+//
+// define a sprite map
+$sprite: sprite-map("sprite/*.png");
+
+//* example :
+// @include sprite($sprite, arrow);
+
+@mixin sprite($map, $sprite, $vertical-align: false, $horizontal-align: false, $repeat: no-repeat, $height: true, $width: true) {
+  $sprite-image: sprite-file($map, $sprite);
+  $sprite-map: sprite-url($map);
+  $sprite-position: sprite-position($map, $sprite);
+  background: $sprite-map $sprite-position $repeat;
+  @if $height == true {
+    $sprite-height: image-height($sprite-image);
+    $sprite-height-half: -$sprite-height/2;
+    height: $sprite-height;
+    @if $vertical-align == true {
+      margin-top: $sprite-height-half;
+    }
+  }
+
+  @if $width == true {
+    $sprite-width: image-width($sprite-image);
+    width: $sprite-width;
+    $sprite-width-half: -$sprite-width/2;
+    @if $horizontal-align == true {
+      margin-left: $sprite-width-half;
+    }
+  }
+}

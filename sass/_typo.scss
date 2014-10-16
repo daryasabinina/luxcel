@@ -1,0 +1,57 @@
+$altTahoma: Tahoma, Geneva, sans-serif;
+
+$altMyriad: "Myriad Pro", Arial, sans-serif;
+
+$altVerdana: Verdana, Geneva, sans-serif;
+
+footer,
+aside li,
+.dropdown a,
+.content h2,
+.secondary-links li,
+.content nav ul {
+  font: {
+    size: 11px;
+    family: $altTahoma;
+  }
+}
+
+aside h2,
+.content h1,
+header .menu,
+header .header-decoration p {
+  font-family: $altMyriad;
+}
+
+.content section {
+  font-family: $altVerdana;
+}
+
+.content h1,
+.content h2 {
+  font-weight: normal;
+}
+
+header .header-decoration p {
+    font: {
+      size: 29px;
+      style: italic;
+    }
+}
+
+header .menu > li > a {
+    font: {
+      size: 14px;
+      weight: bold;
+    }
+}
+
+.content {
+  h1 {
+    font-size: 24px;
+    & + section h2 {
+      font-size: 17px;
+    }
+  }
+}
+

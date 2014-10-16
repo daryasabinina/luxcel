@@ -1,0 +1,15 @@
+/**
+* extends to use later
+**/
+
+%clearfix {
+  &:after {
+    clear: both;
+    display: table;
+    content: "";
+  }
+}
+
+.clearfix {
+  @extend %clearfix;
+}
